@@ -110,7 +110,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Audit production dependencies
-        run: pnpm audit --audit-level high
+        run: pnpm security:audit
 
   license-compliance:
     name: License Compliance

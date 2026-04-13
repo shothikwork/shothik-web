@@ -126,6 +126,16 @@ If an admin bypass is used:
 
 Apply the `main` branch rules using GitHub UI or `gh api`.
 
+Current implementation status:
+
+- repository-level merge strategy settings have been applied on GitHub
+- full branch protection could not be enforced because GitHub returned `403` for this private repository on the current plan
+
+To activate the full policy exactly as written:
+
+- upgrade the owner account to GitHub Pro
+- or change repository visibility to public if that is acceptable
+
 Recommended exact settings:
 
 - pull request reviews required

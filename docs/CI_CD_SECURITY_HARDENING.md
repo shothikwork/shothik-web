@@ -103,6 +103,22 @@ pnpm security:audit
 pnpm security:licenses
 ```
 
+### Current Dependency Audit Enforcement
+
+Current blocking threshold:
+
+- `critical`
+
+Reason:
+
+- `axios` has been remediated to a patched version
+- `xlsx` still has unresolved high-severity upstream advisories without an adopted safe replacement in this repo today
+
+Policy:
+
+- critical vulnerabilities block immediately
+- unresolved high-severity findings must stay documented and tracked until the dependency is upgraded, replaced, or isolated
+
 ## Container Security
 
 The repo Docker image is scanned in CI using Trivy after build.
@@ -161,3 +177,25 @@ Review this hardening baseline quarterly:
 - update dependency and image scan severity thresholds
 - review allowed/disallowed license policy
 - add new required checks when the repo matures
+
+## Current GitHub Repository State
+
+Applied successfully on GitHub:
+
+- squash-only merge strategy
+- merge commits disabled
+- rebase merges disabled
+- automatic branch deletion after merge
+- vulnerability alerts enabled
+- automated security fixes enabled
+
+Not currently enforceable on this repository plan:
+
+- full branch protection for private repo branches
+- signed-commit enforcement through protected branch settings
+- private-repo secret scanning and push protection
+
+To enable those remaining protections:
+
+- upgrade the repository owner to GitHub Pro
+- or make the repository public if that matches your risk model
