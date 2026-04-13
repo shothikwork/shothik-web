@@ -1,0 +1,15 @@
+.git
+.github
+node_modules
+.env
+.env.*
+.next
+coverage
+docs
+tests
+*.log
+tmp
+temp
+.DS_Store
+README*
+CHANGELOG*
