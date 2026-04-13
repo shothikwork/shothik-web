@@ -681,4 +681,7 @@ Track at minimum:
 
 - [TEST_CASE_DOCUMENTATION.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/TEST_CASE_DOCUMENTATION.md)
 - [FUTURE_WORK_ROADMAP.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/FUTURE_WORK_ROADMAP.md)
+- [CI_CD_SECURITY_HARDENING.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/CI_CD_SECURITY_HARDENING.md)
+- [BRANCH_PROTECTION_POLICY.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/BRANCH_PROTECTION_POLICY.md)
+- [COVERAGE_IMPROVEMENT_PLAN.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/COVERAGE_IMPROVEMENT_PLAN.md)
 - [PARAPHRASE_PLAGIARISM_MODERNIZATION_ROLLOUT.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/PARAPHRASE_PLAGIARISM_MODERNIZATION_ROLLOUT.md)

@@ -10,7 +10,10 @@
     "type-check": "tsc --noEmit --project tsconfig.json",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "ci:local": "pnpm type-check && pnpm test:coverage && NEXT_PUBLIC_CONVEX_URL=https://placeholder.convex.cloud STRIPE_SECRET_KEY=sk_test_placeholder pnpm build",
+    "security:licenses": "node scripts/check-license-compliance.mjs",
+    "security:audit": "pnpm audit --audit-level high"
   },
   "dependencies": {
     "@asteasolutions/zod-to-openapi": "^8.5.0",
