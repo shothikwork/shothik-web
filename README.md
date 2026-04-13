@@ -17,6 +17,7 @@ This project contains the production-facing Next.js application, frontend API ro
 - [Environment Variables](#environment-variables)
 - [Dependencies And Compatibility Notes](#dependencies-and-compatibility-notes)
 - [Testing And Quality Gates](#testing-and-quality-gates)
+- [Continuous Integration](#continuous-integration)
 - [Troubleshooting](#troubleshooting)
 - [Security And Compliance](#security-and-compliance)
 - [Performance And Monitoring](#performance-and-monitoring)
@@ -523,6 +524,42 @@ These are the current enforced floors, not the long-term target standard.
 See:
 
 - [TEST_CASE_DOCUMENTATION.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/TEST_CASE_DOCUMENTATION.md)
+
+## Continuous Integration
+
+Initial CI workflow:
+
+- [ci.yml](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/.github/workflows/ci.yml)
+
+The workflow currently runs:
+
+- dependency install with frozen lockfile
+- TypeScript type-check
+- test coverage run
+- production build with safe placeholder env values
+- optional Playwright smoke execution on manual dispatch
+
+### Local Pre-PR Validation
+
+Run the same core checks locally before pushing:
+
+```bash
+pnpm install
+pnpm type-check
+pnpm test:coverage
+NEXT_PUBLIC_CONVEX_URL=https://placeholder.convex.cloud STRIPE_SECRET_KEY=sk_test_placeholder pnpm build
+```
+
+### Branch Strategy
+
+Recommended working branches:
+
+- `feat/*`
+- `fix/*`
+- `chore/*`
+- `docs/*`
+- `refactor/*`
+- `test/*`
 
 ## Troubleshooting
 

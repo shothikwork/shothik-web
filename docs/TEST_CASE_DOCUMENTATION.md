@@ -235,6 +235,23 @@ Use sandbox or placeholder values where live providers are not required.
 6. production build validation
 7. optional Playwright smoke tests for release branches
 
+### Current Repository Workflow
+
+The initial GitHub Actions workflow lives at:
+
+- [ci.yml](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/.github/workflows/ci.yml)
+
+Current enforced checks:
+
+- `pnpm install --frozen-lockfile`
+- `pnpm type-check`
+- `pnpm test:coverage`
+- `pnpm build`
+
+Current optional manual check:
+
+- Playwright smoke suite when `./e2e` contains tests and the workflow is manually dispatched
+
 ### Recommended CI Commands
 
 ```bash
