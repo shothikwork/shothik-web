@@ -441,6 +441,8 @@ The full reference lives in [`.env.example`](file:///Users/macos/Downloads/shoth
 
 | Variable | Purpose | Required |
 | --- | --- | --- |
+| `NEXT_PUBLIC_APP_URL` | canonical frontend URL | Recommended |
+| `NEXT_PUBLIC_API_URL` | external API origin used by route rewrites and client integrations | Yes |
 | `NEXT_PUBLIC_CONVEX_URL` | Convex URL for frontend and API route access | Yes |
 | `CONVEX_DEPLOYMENT` | Convex deployment name | Usually |
 | `CLERK_SECRET_KEY` | server-side auth | Yes for protected routes |
@@ -456,7 +458,7 @@ The full reference lives in [`.env.example`](file:///Users/macos/Downloads/shoth
 | `NLP_SERVICE_URL` | `http://localhost:3001` | NLP inference backend |
 | `AI_DETECTOR_SERVICE_URL` | `http://localhost:3002` | AI detector backend |
 | `CALIBRE_SERVICE_URL` | `http://localhost:3003` | ebook / conversion backend |
-| `NEXT_PUBLIC_API_URL` | production API base | backend health / integration calls |
+| `NEXT_PUBLIC_API_URL` | `https://shothik.work` | external API base and rewrite target for `/api/*` and `/paraphrase/*` |
 
 ### Payments And Business Integrations
 
@@ -684,4 +686,5 @@ Track at minimum:
 - [CI_CD_SECURITY_HARDENING.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/CI_CD_SECURITY_HARDENING.md)
 - [BRANCH_PROTECTION_POLICY.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/BRANCH_PROTECTION_POLICY.md)
 - [COVERAGE_IMPROVEMENT_PLAN.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/COVERAGE_IMPROVEMENT_PLAN.md)
+- [ENVIRONMENT_VARIABLES.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/ENVIRONMENT_VARIABLES.md)
 - [PARAPHRASE_PLAGIARISM_MODERNIZATION_ROLLOUT.md](file:///Users/macos/Downloads/shothik-platfrom1%204/fresh-repos/shothik-web/docs/PARAPHRASE_PLAGIARISM_MODERNIZATION_ROLLOUT.md)
