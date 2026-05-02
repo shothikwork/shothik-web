@@ -2,7 +2,12 @@ import type { NextConfig } from "next";
 import { fileURLToPath } from "node:url";
 
 // Standalone repo extraction: the app root is the repository root here.
-const turbopackRoot = fileURLToPath(new URL("./", import.meta.url));
+let turbopackRoot: string;
+try {
+  turbopackRoot = fileURLToPath(new URL("./", import.meta.url));
+} catch {
+  turbopackRoot = process.cwd();
+}
 const externalApiOrigin =
   (process.env.NEXT_PUBLIC_API_URL || "https://shothik.work").replace(/\/+$/, "");
 
